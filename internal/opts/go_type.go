@@ -66,9 +66,11 @@ func (o *GoType) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	return nil
 }
 
-var validIdentifier = regexp.MustCompile(`^[a-zA-Z0-9_]+$`)
-var versionNumber = regexp.MustCompile(`^v[0-9]+$`)
-var invalidIdentifier = regexp.MustCompile(`[^a-zA-Z0-9_]`)
+var (
+	validIdentifier   = regexp.MustCompile(`^[a-zA-Z0-9_]+$`)
+	versionNumber     = regexp.MustCompile(`^v[0-9]+$`)
+	invalidIdentifier = regexp.MustCompile(`[^a-zA-Z0-9_]`)
+)
 
 func generatePackageID(importPath string) (string, bool) {
 	parts := strings.Split(importPath, "/")
