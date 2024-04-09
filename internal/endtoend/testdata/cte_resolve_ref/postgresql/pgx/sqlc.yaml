@@ -1,0 +1,15 @@
+version: '2'
+plugins:
+  - name: golang
+    process:
+      cmd: '../../../../../bin/sqlc-gen-go'
+sql:
+  - engine: 'postgresql'
+    schema: 'schema.sql'
+    queries: 'query.sql'
+    gen:
+      go:
+        package: 'querytest'
+        out: 'go'
+        sql_package: 'pgx/v5'
+
