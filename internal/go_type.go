@@ -3,7 +3,7 @@ package golang
 import (
 	"strings"
 
-	"github.com/sqlc-dev/sqlc-gen-go/internal/opts"
+	"github.com/simonklee/sqlc-gen-go/internal/opts"
 	"github.com/sqlc-dev/plugin-sdk-go/sdk"
 	"github.com/sqlc-dev/plugin-sdk-go/plugin"
 )
