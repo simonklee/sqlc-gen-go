@@ -44,7 +44,7 @@ install-sqlc:
 	echo "Checking out the $(SQLC_VERSION) version..." && \
 	git checkout $(SQLC_VERSION) && \
 	echo "Building and installing sqlc..." && \
-	make sqlc-dev
+	go install ./cmd/sqlc
 
 	# Clean up
 	@echo "Cleaning up..."
